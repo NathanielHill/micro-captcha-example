@@ -3,6 +3,6 @@
   "alias": "micro-captcha.now.sh",
 
   "env": {
-    "RECAPTCHA_SECRET_KEY": "6LdzXJAUAAAAACNhTOwh0IcvQj7h4rUGGeoVbkbx"
+    "RECAPTCHA_SECRET_KEY": "@micro_captcha_example_secret_key"
   }
 }
