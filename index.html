@@ -1,0 +1,47 @@
+<html lang='en'>
+  <head>
+    <title>micro-captcha demo</title>
+      <style>
+        body {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+        }
+        h1 {
+          text-transform: uppercase;
+          margin: 0 0 1em 0;
+        }
+      </style>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      <script>
+        captchaCallback = function (captchaResponse) {
+          console.log(x)
+          fetch(`/api/contact?response=${captchaResponse}`)
+            .then(r => {
+              if (r.ok) return r.json()
+              throw new Error('failed to verify humanity')
+            })
+            .then(({ verified }) => {
+              if (verified) {
+                ... // Notify user of success!
+              }
+            })
+        }
+      </script>
+  </head>
+  <body>
+    <h1>micro-captcha demo</h1>
+    <form action="?" method="POST">
+      <div class="g-recaptcha"
+        data-sitekey="6LdzXJAUAAAAAHe7Vum0SZnBWucdNkb4Rk7jfQ4d"
+        data-callback="captchaCallback"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

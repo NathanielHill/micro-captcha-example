@@ -1,0 +1,8 @@
+{
+  "name": "micro-captcha-example",
+  "private": false,
+  "workspaces": [
+    "api/captcha",
+    "api/contact"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "micro-captcha-example",
+  "alias": "micro-captcha.now.sh",
+
+  "env": {
+    "RECAPTCHA_SECRET_KEY": "6LdzXJAUAAAAACNhTOwh0IcvQj7h4rUGGeoVbkbx"
+  }
+}
